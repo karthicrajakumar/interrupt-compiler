@@ -20,7 +20,7 @@ mainApp.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, 
 	redirect :'/Interrupt/online-coding/index.php'
 }).state('login',{
 	url: "/login",
-	templateUrl : '/Interrupt/online-coding/login-register.html'
+	templateUrl : '/login-register.html'
 }).state('matrixPrint',{
 	url:"/matrixPrint",
 	templateUrl: '/Interrupt/online-coding/matrixPrint.html'
