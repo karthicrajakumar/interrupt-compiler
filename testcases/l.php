@@ -4,7 +4,7 @@ set_time_limit(5);
 $start_time = time();
 require_once('../../dbConnect.php');
 $sql = dbConnect();
-$name = $_SESSION['name'];
+$name = $_SESSION['email'];
 $id = $_SESSION['id'];
 if(isset($_SESSION['id']))
 { 
