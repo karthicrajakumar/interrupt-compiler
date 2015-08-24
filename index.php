@@ -15,7 +15,7 @@
     <script src="assets/libs/codemirror/foldcode.js"></script>
     <!--script src="assets/libs/codemirror/javascript.js"></script-->
     <script src="assets/libs/codemirror/clike.js"></script>
-	 <base href="/Interrupt/online-coding/">  
+	 <base href="/online-coding/">  
 	
 </head>
 <body ng-app="mainApp" ng-controller="mainController">
