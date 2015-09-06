@@ -9,13 +9,14 @@
 	 <link rel="stylesheet" href="assets/libs/codemirror/codemirror.css">
 	 <link rel="stylesheet" href="assets/css/common-style.css">
 	 <link rel="stylesheet" href="assets/libs/ui-select/select.min.css">
+	 <meta http-equiv="pragma" content="nocache">
 	 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script src="assets/libs/codemirror/codemirror.js"></script>
 
     <script src="assets/libs/codemirror/foldcode.js"></script>
     <!--script src="assets/libs/codemirror/javascript.js"></script-->
     <script src="assets/libs/codemirror/clike.js"></script>
-	 <base href="/online-coding/">  
+	 <base href="/Interrupt/online-coding/">  
 	
 </head>
 <body ng-app="mainApp" ng-controller="mainController">

@@ -9,10 +9,13 @@ $sql = dbConnect();
 		$details['name'] = $_SESSION['name'];
 		$query = mysqli_query($sql , "SELECT * FROM `online_coding` where `user_id` = ".$details["user_id"]."");
 		$data = mysqli_fetch_array($query);
+		$query4 = mysqli_query($sql,"SELECT * FROM online_coding_round1 WHERE user_id = ".$details["user_id"]."");
+		$data2  = mysqli_fetch_array($query4);
 		if($data)
 		{
 			//$data = mysqli_fetch_array($query);
-			$details['current'] = $data['current'];  
+			$details['current'] = $data['current'];
+			$details['current2'] = $data2['current'];  
 			echo json_encode($details);
 		}
 		else {
@@ -20,6 +23,7 @@ $sql = dbConnect();
 			$query = mysqli_query($sql,"SELECT * FROM online_coding where user_id = ".$details['user_id']."");
 			$data = mysqli_fetch_array($query);
 			$details['current'] = $data['current'];  
+			$details['current2'] = $data2['current'];
 			echo json_encode($details);
 		}
 		

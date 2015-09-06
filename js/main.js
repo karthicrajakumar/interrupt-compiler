@@ -20,7 +20,7 @@ mainApp.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, 
 	redirect :'/Interrupt/online-coding/index.php'
 }).state('login',{
 	url: "/login",
-	templateUrl : '/login-register.html'
+	templateUrl : '/Interrupt/online-coding/login-register.html'
 }).state('matrixPrint',{
 	url:"/matrixPrint",
 	templateUrl: '/Interrupt/online-coding/matrixPrint.html'
@@ -124,6 +124,11 @@ mainApp.controller('mainController',['$scope','appService','$location','$window'
     		}
     		else {
     			$scope.user = response;
+
+    		/*	if($scope.user.current2 != 35)
+    			{
+    				window.location.href = '/Interrupt/round1/';
+    			} */
     			if($scope.user.current == 1 )
     			{
     				$location.path('milkMan');

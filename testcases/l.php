@@ -2,6 +2,7 @@
 session_start();
 set_time_limit(5);
 $start_time = time();
+require_once './class.Diff.php';
 require_once('../../dbConnect.php');
 $sql = dbConnect();
 $name = $_SESSION['email'];
@@ -43,7 +44,7 @@ if(isset($_SESSION['id']))
 					}
 
 					$output= "";
-
+;
 					
 					if($status == 124){
 						$response["testcase".$i] = "Failed";
@@ -56,9 +57,12 @@ if(isset($_SESSION['id']))
 						$fileName = $b."Output.txt";
 						
 						file_put_contents($fileName,$final[$i]);
-						if(files_are_equal($fileName,$testcase_o[$i]))
+						$diff = Diff::compareFiles($fileName,$testcase_o[$i]);
+						
+						if($diff[0][1] == 0 )
+
 						{	
-							if($response["error"] == true){
+								if($response["error"] == true){
 								$response["error"] = true ;
 							}
 							else{
@@ -132,6 +136,7 @@ if(isset($_SESSION['id']))
 						{	
 							if($response["error"] == true){
 								$response["error"] = true ;
+									echo $fileName;
 							}
 							else{
 								$response["error"] = false ;
